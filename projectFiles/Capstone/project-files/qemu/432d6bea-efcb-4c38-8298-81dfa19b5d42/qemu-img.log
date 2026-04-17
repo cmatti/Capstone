@@ -1,0 +1,1 @@
+Formatting '/home/cmatti/Documents/git/Capstone/projectFiles/Capstone/project-files/qemu/432d6bea-efcb-4c38-8298-81dfa19b5d42/hda_disk.qcow2', fmt=qcow2 cluster_size=65536 extended_l2=off compression_type=zlib size=107374182400 backing_file=/home/cmatti/GNS3/images/QEMU/empty100G.qcow2 backing_fmt=qcow2 lazy_refcounts=off refcount_bits=16
