@@ -1,5 +1,2 @@
 * text=auto
 *.gns3a text eol=lf
-*.qcow2 filter=lfs diff=lfs merge=lfs -text
-*.iso filter=lfs diff=lfs merge=lfs -text
-*.vmdk filter=lfs diff=lfs merge=lfs -text
