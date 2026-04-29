@@ -1,0 +1,441 @@
+{
+  "version": 4,
+  "terraform_version": "1.14.8",
+  "serial": 54,
+  "lineage": "ad826d6f-f1e6-b3ca-7094-efb5910a0f8a",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "data",
+      "type": "azurerm_image",
+      "name": "custom_base",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "data_disk": [],
+            "id": "/subscriptions/e87c58e8-2b54-42a9-85b3-b53098133705/resourceGroups/rg-capstone-setup/providers/Microsoft.Compute/images/ubuntu-gns3-base-image",
+            "location": "northcentralus",
+            "name": "ubuntu-gns3-base-image",
+            "name_regex": null,
+            "os_disk": [
+              {
+                "blob_uri": "",
+                "caching": "ReadWrite",
+                "managed_disk_id": "/subscriptions/e87c58e8-2b54-42a9-85b3-b53098133705/resourceGroups/rg-capstone-setup/providers/Microsoft.Compute/disks/osdisk-ubuntu-capstone",
+                "os_state": "Generalized",
+                "os_type": "Linux",
+                "size_gb": 30
+              }
+            ],
+            "resource_group_name": "rg-capstone-setup",
+            "sort_descending": false,
+            "tags": {},
+            "timeouts": null,
+            "zone_resilient": false
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_linux_virtual_machine",
+      "name": "vm",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "additional_capabilities": [],
+            "admin_password": null,
+            "admin_ssh_key": [
+              {
+                "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDjJQMzLNwBc/9L4QVcOA/85TU7jVmV+syECLxQoGJsh13fsGjLs60T8m7V/j30KNvrwGImo0XVQmv1/nEAZBHDdhq1zNh92iHbArQVzWpBKcaH9dp8YnE6nBvkAAVkgTbSOCnyRRtkgXVv6pi53nhXmsQP+B/ZZg2iicCfjHK1U7e03Y0iUw1VCTpa8xJXFf8NYb4/SmttUxQ7AR2k2MjV0tuZWUT6V97fUD4BKw/KUCkatz/hXiz/00BUTo+Cgzj+ETVzhvpF9tqgwF/Cer4aCwzFA2lFVRpuXtmuYXu5K9+xdOh/XMY+uoPlRxM62eEmDYBtW564FVYFF/QIq27Kjb1HzYgvedq4ruQQIEwY5n+WjYkrTgCsI8sRY3+LwtJjxLxxywJAHMdNR+Vb+pd0E+QbIKm1+4l9zBfU1vA2Yo4Ua3z0+BZxe+QNKruX5HtigEDKc716ibNP/ZJR6VNHqxsHPiVCwOGJuJy6VODCBfSpwSXe1tlEtxwpSQKu3vBp/IIB9Wje6y67Bse1u7dbdLESvTbNNsZ1NaS/BomC3jWCCmMGOLNq5/eliU2Agc2qDa9BRk676eh6nQC9IhrOnYvSlkQk++eTfrw+l0KWyPD6UCqtbqoqwUHkPRA7Te/6JAqa3pP1tnL0GwDamF2D8fNCTOWC0nBwzLKok1J4Tw== chris@chris-vmwarevirtualplatform\n",
+                "username": "azureuser"
+              }
+            ],
+            "admin_username": "azureuser",
+            "allow_extension_operations": true,
+            "availability_set_id": "",
+            "boot_diagnostics": [],
+            "bypass_platform_safety_checks_on_user_schedule_enabled": false,
+            "capacity_reservation_group_id": "",
+            "computer_name": "vm-ubuntu-capstone",
+            "custom_data": null,
+            "dedicated_host_group_id": "",
+            "dedicated_host_id": "",
+            "disable_password_authentication": true,
+            "disk_controller_type": "SCSI",
+            "edge_zone": "",
+            "encryption_at_host_enabled": false,
+            "eviction_policy": "",
+            "extensions_time_budget": "PT1H30M",
+            "gallery_application": [],
+            "id": "/subscriptions/e87c58e8-2b54-42a9-85b3-b53098133705/resourceGroups/rg-capstone-setup/providers/Microsoft.Compute/virtualMachines/vm-ubuntu-capstone",
+            "identity": [],
+            "license_type": "",
+            "location": "northcentralus",
+            "max_bid_price": -1,
+            "name": "vm-ubuntu-capstone",
+            "network_interface_ids": [
+              "/subscriptions/e87c58e8-2b54-42a9-85b3-b53098133705/resourceGroups/rg-capstone-setup/providers/Microsoft.Network/networkInterfaces/nic-ubuntu-vm"
+            ],
+            "os_disk": [
+              {
+                "caching": "ReadWrite",
+                "diff_disk_settings": [],
+                "disk_encryption_set_id": "",
+                "disk_size_gb": 30,
+                "name": "osdisk-ubuntu-capstone",
+                "secure_vm_disk_encryption_set_id": "",
+                "security_encryption_type": "",
+                "storage_account_type": "Standard_LRS",
+                "write_accelerator_enabled": false
+              }
+            ],
+            "os_image_notification": [],
+            "patch_assessment_mode": "ImageDefault",
+            "patch_mode": "ImageDefault",
+            "plan": [],
+            "platform_fault_domain": -1,
+            "priority": "Regular",
+            "private_ip_address": "10.100.1.4",
+            "private_ip_addresses": [
+              "10.100.1.4"
+            ],
+            "provision_vm_agent": true,
+            "proximity_placement_group_id": "",
+            "public_ip_address": "52.237.180.111",
+            "public_ip_addresses": [
+              "52.237.180.111"
+            ],
+            "reboot_setting": "",
+            "resource_group_name": "rg-capstone-setup",
+            "secret": [],
+            "secure_boot_enabled": false,
+            "size": "Standard_D8s_v3",
+            "source_image_id": "",
+            "source_image_reference": [
+              {
+                "offer": "ubuntu-24_04-lts",
+                "publisher": "Canonical",
+                "sku": "server",
+                "version": "latest"
+              }
+            ],
+            "tags": {},
+            "termination_notification": [],
+            "timeouts": null,
+            "user_data": "",
+            "virtual_machine_id": "21e8bc87-5269-4879-8715-bcc4fa4534a9",
+            "virtual_machine_scale_set_id": "",
+            "vm_agent_platform_updates_enabled": false,
+            "vtpm_enabled": false,
+            "zone": ""
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "admin_password"
+              }
+            ],
+            [
+              {
+                "type": "get_attr",
+                "value": "custom_data"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNzAwMDAwMDAwMDAwLCJkZWxldGUiOjI3MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoyNzAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "azurerm_network_interface.nic",
+            "azurerm_public_ip.pip",
+            "azurerm_resource_group.primary",
+            "azurerm_subnet.internal",
+            "azurerm_virtual_network.vnet",
+            "data.azurerm_image.custom_base"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_network_interface",
+      "name": "nic",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "accelerated_networking_enabled": false,
+            "applied_dns_servers": [],
+            "auxiliary_mode": "",
+            "auxiliary_sku": "",
+            "dns_servers": [],
+            "edge_zone": "",
+            "enable_accelerated_networking": false,
+            "enable_ip_forwarding": false,
+            "id": "/subscriptions/e87c58e8-2b54-42a9-85b3-b53098133705/resourceGroups/rg-capstone-setup/providers/Microsoft.Network/networkInterfaces/nic-ubuntu-vm",
+            "internal_dns_name_label": "",
+            "internal_domain_name_suffix": "mvap5pr0fbmezjnfhgwg0p14me.ex.internal.cloudapp.net",
+            "ip_configuration": [
+              {
+                "gateway_load_balancer_frontend_ip_configuration_id": "",
+                "name": "internal",
+                "primary": true,
+                "private_ip_address": "10.100.1.4",
+                "private_ip_address_allocation": "Dynamic",
+                "private_ip_address_version": "IPv4",
+                "public_ip_address_id": "/subscriptions/e87c58e8-2b54-42a9-85b3-b53098133705/resourceGroups/rg-capstone-setup/providers/Microsoft.Network/publicIPAddresses/pip-ubuntu-vm",
+                "subnet_id": "/subscriptions/e87c58e8-2b54-42a9-85b3-b53098133705/resourceGroups/rg-capstone-setup/providers/Microsoft.Network/virtualNetworks/vnet-main/subnets/snet-internal"
+              }
+            ],
+            "ip_forwarding_enabled": false,
+            "location": "northcentralus",
+            "mac_address": "7C-ED-8D-55-38-8A",
+            "name": "nic-ubuntu-vm",
+            "private_ip_address": "10.100.1.4",
+            "private_ip_addresses": [
+              "10.100.1.4"
+            ],
+            "resource_group_name": "rg-capstone-setup",
+            "tags": {},
+            "timeouts": null,
+            "virtual_machine_id": "/subscriptions/e87c58e8-2b54-42a9-85b3-b53098133705/resourceGroups/rg-capstone-setup/providers/Microsoft.Compute/virtualMachines/vm-ubuntu-capstone"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "azurerm_public_ip.pip",
+            "azurerm_resource_group.primary",
+            "azurerm_subnet.internal",
+            "azurerm_virtual_network.vnet"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_network_security_group",
+      "name": "nsg",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "/subscriptions/e87c58e8-2b54-42a9-85b3-b53098133705/resourceGroups/rg-capstone-setup/providers/Microsoft.Network/networkSecurityGroups/nsg-capstone",
+            "location": "northcentralus",
+            "name": "nsg-capstone",
+            "resource_group_name": "rg-capstone-setup",
+            "security_rule": [
+              {
+                "access": "Allow",
+                "description": "",
+                "destination_address_prefix": "*",
+                "destination_address_prefixes": [],
+                "destination_application_security_group_ids": [],
+                "destination_port_range": "",
+                "destination_port_ranges": [
+                  "22",
+                  "3389"
+                ],
+                "direction": "Inbound",
+                "name": "Allow-SSH-RDP-Inbound",
+                "priority": 100,
+                "protocol": "Tcp",
+                "source_address_prefix": "24.128.175.25/32",
+                "source_address_prefixes": [],
+                "source_application_security_group_ids": [],
+                "source_port_range": "*",
+                "source_port_ranges": []
+              }
+            ],
+            "tags": {},
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "azurerm_resource_group.primary"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_public_ip",
+      "name": "pip",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "allocation_method": "Static",
+            "ddos_protection_mode": "VirtualNetworkInherited",
+            "ddos_protection_plan_id": null,
+            "domain_name_label": null,
+            "edge_zone": "",
+            "fqdn": null,
+            "id": "/subscriptions/e87c58e8-2b54-42a9-85b3-b53098133705/resourceGroups/rg-capstone-setup/providers/Microsoft.Network/publicIPAddresses/pip-ubuntu-vm",
+            "idle_timeout_in_minutes": 4,
+            "ip_address": "52.237.180.111",
+            "ip_tags": {},
+            "ip_version": "IPv4",
+            "location": "northcentralus",
+            "name": "pip-ubuntu-vm",
+            "public_ip_prefix_id": null,
+            "resource_group_name": "rg-capstone-setup",
+            "reverse_fqdn": null,
+            "sku": "Standard",
+            "sku_tier": "Regional",
+            "tags": {},
+            "timeouts": null,
+            "zones": []
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "azurerm_resource_group.primary"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "primary",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "/subscriptions/e87c58e8-2b54-42a9-85b3-b53098133705/resourceGroups/rg-capstone-setup",
+            "location": "northcentralus",
+            "managed_by": "",
+            "name": "rg-capstone-setup",
+            "tags": {},
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo1NDAwMDAwMDAwMDAwLCJkZWxldGUiOjU0MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjo1NDAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_subnet",
+      "name": "internal",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "address_prefixes": [
+              "10.100.1.0/24"
+            ],
+            "default_outbound_access_enabled": true,
+            "delegation": [],
+            "enforce_private_link_endpoint_network_policies": false,
+            "enforce_private_link_service_network_policies": false,
+            "id": "/subscriptions/e87c58e8-2b54-42a9-85b3-b53098133705/resourceGroups/rg-capstone-setup/providers/Microsoft.Network/virtualNetworks/vnet-main/subnets/snet-internal",
+            "name": "snet-internal",
+            "private_endpoint_network_policies": "Enabled",
+            "private_endpoint_network_policies_enabled": true,
+            "private_link_service_network_policies_enabled": true,
+            "resource_group_name": "rg-capstone-setup",
+            "service_endpoint_policy_ids": [],
+            "service_endpoints": [],
+            "timeouts": null,
+            "virtual_network_name": "vnet-main"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "azurerm_resource_group.primary",
+            "azurerm_virtual_network.vnet"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_subnet_network_security_group_association",
+      "name": "nsg_assoc",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "/subscriptions/e87c58e8-2b54-42a9-85b3-b53098133705/resourceGroups/rg-capstone-setup/providers/Microsoft.Network/virtualNetworks/vnet-main/subnets/snet-internal",
+            "network_security_group_id": "/subscriptions/e87c58e8-2b54-42a9-85b3-b53098133705/resourceGroups/rg-capstone-setup/providers/Microsoft.Network/networkSecurityGroups/nsg-capstone",
+            "subnet_id": "/subscriptions/e87c58e8-2b54-42a9-85b3-b53098133705/resourceGroups/rg-capstone-setup/providers/Microsoft.Network/virtualNetworks/vnet-main/subnets/snet-internal",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "azurerm_network_security_group.nsg",
+            "azurerm_resource_group.primary",
+            "azurerm_subnet.internal",
+            "azurerm_virtual_network.vnet"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_virtual_network",
+      "name": "vnet",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "address_space": [
+              "10.100.0.0/16"
+            ],
+            "bgp_community": "",
+            "ddos_protection_plan": [],
+            "dns_servers": [],
+            "edge_zone": "",
+            "encryption": [],
+            "flow_timeout_in_minutes": 0,
+            "guid": "beff4065-283a-4c58-a5a5-39ac6d3f7e64",
+            "id": "/subscriptions/e87c58e8-2b54-42a9-85b3-b53098133705/resourceGroups/rg-capstone-setup/providers/Microsoft.Network/virtualNetworks/vnet-main",
+            "location": "northcentralus",
+            "name": "vnet-main",
+            "resource_group_name": "rg-capstone-setup",
+            "subnet": [
+              {
+                "address_prefix": "10.100.1.0/24",
+                "id": "/subscriptions/e87c58e8-2b54-42a9-85b3-b53098133705/resourceGroups/rg-capstone-setup/providers/Microsoft.Network/virtualNetworks/vnet-main/subnets/snet-internal",
+                "name": "snet-internal",
+                "security_group": "/subscriptions/e87c58e8-2b54-42a9-85b3-b53098133705/resourceGroups/rg-capstone-setup/providers/Microsoft.Network/networkSecurityGroups/nsg-capstone"
+              }
+            ],
+            "tags": {},
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "azurerm_resource_group.primary"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
