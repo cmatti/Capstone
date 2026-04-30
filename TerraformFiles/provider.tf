@@ -10,8 +10,3 @@ terraform {
 provider "azurerm" {
   features {}
 }
-
-resource "azurerm_resource_group" "primary" {
-  name     = "rg-capstone-setup"
-  location = "North Central US"
-}

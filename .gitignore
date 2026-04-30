@@ -1,3 +1,8 @@
 iso/
 images/
 projectFiles/Capstone/project-files/
+.terraform/
+*.tfstate
+*.tfstate.backup
+id_rsa
+id_rsa.pub
