@@ -1,0 +1,4 @@
+terraform destroy -target="azurerm_linux_virtual_machine.cloud_server" -target="azurerm_network_interface.cloud_server_nic" -target="azurerm_public_ip.vpngw_pip"
+
+
+terraform apply -target="azurerm_linux_virtual_machine.cloud_server" -target="azurerm_network_interface.cloud_server_nic" -target="azurerm_public_ip.vpngw_pip"

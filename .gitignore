@@ -4,5 +4,6 @@ projectFiles/Capstone/project-files/
 .terraform/
 *.tfstate
 *.tfstate.backup
+*.lock.hcl
 id_rsa
 id_rsa.pub
